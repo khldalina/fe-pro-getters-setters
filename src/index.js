@@ -21,7 +21,7 @@ export const school = {
     7: new Student('Ivan', [76, 89, 78, 98, 98, 99, 89, 96]),
   },
   get aGradeStudents () {
-    let student = Object.value(this.students).filter((user) => {
+    let student = Object.values(this.students).filter((user) => {
       return Number(user.averageGrade) >= 90
     })
         .map((user) => user.name)
@@ -29,7 +29,7 @@ export const school = {
     return student;
   },
   get bGradeStudents () {
-    let student = Object.value(this.students).filter((user) => {
+    let student = Object.values(this.students).filter((user) => {
       return Number(user.averageGrade) < 89 && Number(user.averageGrade) >= 75
     })
         .map((user) => user.name)
@@ -37,7 +37,7 @@ export const school = {
     return student;
   },
   get cGradeStudents () {
-    let student = Object.value(this.students).filter((user) => {
+    let student = Object.values(this.students).filter((user) => {
       return Number(user.averageGrade) < 75 && Number(user.averageGrade) >= 60
     })
         .map((user) => user.name)
@@ -45,7 +45,7 @@ export const school = {
     return student;
   },
   get dGradeStudents () {
-    let student = Object.value(this.students).filter((user) => {
+    let student = Object.values(this.students).filter((user) => {
       return Number(user.averageGrade) < 59
     })
         .map((user) => user.name)
